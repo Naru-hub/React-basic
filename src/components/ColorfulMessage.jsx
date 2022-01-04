@@ -1,12 +1,13 @@
 import React from "react";
 
 const ColofulMessage = (props) => {
+  const { color, children } = props;
   const contentStyle = {
-    color: props.color,
+    color: color, //同じオブジェクトを指定しているのでcolorだけでもOK
     fontsize: "18px"
   };
 
-  return <p style={contentStyle}>{props.children}</p>;
+  return <p style={contentStyle}>{children}</p>;
 };
 
 export default ColofulMessage;
